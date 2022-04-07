@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {AddShoppingCart} from '@material-ui/icons';
 import accounting from "accounting";/* 6 */
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
  root: {
@@ -37,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Product() {
+export default function Product({product : {id,name,productType, image,price,rating,description}}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -58,27 +59,32 @@ export default function Product() {
             className={classes.action}
             variant='h5'
             color='textSecondary'
+            
           >
-            {accounting.formatMoney(50, "€")} {/* 7 */}
+            {accounting.formatMoney(price, "€")} {/* 7 */}
           </Typography>
         }
-        title="Zapatilla"/* 2 */
+        
+        title={name}/* 2 */
         subheader="En Stock"
       />
       <CardMedia
         className={classes.media}
-        /* 3 */image="https://s2.r29static.com/bin/entry/ebd/0,675,2000,1050/x,80/1929471/image.jpg"
-        title="Nike shoes"
+        /* 3 */image={image}
+        title={name}
       />
       <CardContent>
-        <Typography variant='body2' color='textSecondary' component='p'>
-          Running Shoes
+        <Typography fontWeight="fontWeightBold" variant='body2' color='textSecondary' component='p'>
+          <Box fontWeight="fontWeightBold"  fontSize={16}>{/* 17 */}
+       {productType}
+      </Box>
+          
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label='Add to Cart' /* onClick={addToBasket} */>
           <AddShoppingCart fontSize='large' />{/* 4 */}
-       {/* 5 */}{Array(4) 
+       {/* 5 */}{Array(rating) 
           .fill()
           .map((_, i) => (
             <p>&#11088;</p>
@@ -98,7 +104,7 @@ export default function Product() {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>
-           Zapatillas de deporte para correr
+           {description}
           </Typography>
           
          

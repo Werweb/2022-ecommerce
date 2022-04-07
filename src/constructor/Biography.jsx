@@ -40,15 +40,15 @@ const Biography = () => {
                           <Typography variant="body1" color="white">lo envolvemos en un botón{/* 13 */}</Typography>
                           <Typography variant="body1" color="white">envolvemos el icono en un badge para queaparezca el numerito {/* 14 */}</Typography>
                           <Typography variant="body1" color="white">Desplazar a la derecha el login {/* 14,15 */}</Typography>
-                          <Typography variant="body1" color="primary">*IMPORTANT* le estamos diciendo que la hamburgesa , el logo, el titulo ocupe todo lo que tenga que ocupar, tambien le decimos que el boton y el icono tmbien ocupen todo lo que tengan que ocupar y en medio lo rellene de espacio</Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="primary">*IMPORTANT* le estamos diciendo que la hamburgesa , el logo, el titulo ocupe todo lo que tenga que ocupar, tambien le decimos que el boton y el icono tmbien ocupen todo lo que tengan que ocupar y en medio lo rellene de espacio: YA {/* 18 */}</Typography>
+                          <Typography variant="body1" color="error">que en dispositivos moviles desaparezca el titulo</Typography>
+                          <Typography variant="body1" color="white">Creamos un archivo en componemtes Products.jsx y le damos gril con material</Typography>
+                          <Typography variant="body1" color="white">creamos un padding para separar del borde {/* 16 */}</Typography>
+                          <Typography variant="body1" color="white"> en product he puesto las letras mas gruesas y mas grandes, pero he tenid oque envolverlo en un Box para que funcione {/* 17 */}</Typography>
+                          <Typography variant="body1" color="white">En component creamos un archivo product-data.js</Typography>
+                          <Typography variant="body1" color="white">en:products lo importamos</Typography>
+                          <Typography variant="body1" color="white">minuto 1:28 https://www.youtube.com/watch?v=4w1UmgkPcUk&t=2196s</Typography>
+                          <Typography variant="body1" color="white">vamos a mapear {/* 19 */}</Typography>
                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>

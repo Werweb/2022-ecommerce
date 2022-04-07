@@ -17,7 +17,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-import { Badge, Button } from '@material-ui/core';
+import { Badge, Button, Hidden } from '@material-ui/core';
 import Logo from '../assets/behance.png';
 import { BrokenImage, ShoppingCart } from '@material-ui/icons';
 
@@ -125,9 +125,11 @@ export default function Navbar() {
             <MenuIcon />
              <img src={Logo} className={classes.imageLogo}/>{/* 9 */}
           </IconButton>
+          <Hidden xsDown> {/* 18 */}
           <Typography variant="h6" color="textPrimary" noWrap>
             Tienda online Be
           </Typography>
+          </Hidden>
           <div className={classes.grow}/>{/* 14 */}
           <div className={classes.button}>
                 <Button variant='outlined' color="inherit"><strong>Ingresar</strong></Button>{/* 8 */}
