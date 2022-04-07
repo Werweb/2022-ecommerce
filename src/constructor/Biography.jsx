@@ -26,10 +26,52 @@ const Biography = () => {
                           <Typography variant="body1" color="white">cambiamos la imagen {/* 3 */}</Typography>
                           <Typography variant="body1" color="white">cambiamos el icono{/* 4 */}</Typography>
                           <Typography variant="body1" color="white">creamos un codigo javascrpt para las estrellitas {/* 5 */}</Typography>
-                          <Typography variant="body1" color="white">gistrar el evento {/* 4 */}</Typography>
-                          <Typography variant="body1" color="white">o {/* 5 */}</Typography>
+                          <Typography variant="body1" color="white">descargamos una libreria para dar formatos a numeros (accounting -npm)</Typography>
+                          <Typography variant="body1" color="white">la importamos {/* 6 */}</Typography>
+                          <Typography variant="body1" color="white">la incluimos {/* 7 */}</Typography>
+                          <Typography variant="body1" color="white">creamos en components , navbar , copiamos codigo de material Drawer </Typography>
+                          <Typography variant="body1" color="white">colocamos un boton {/* 8 */}</Typography>
+                          <Typography variant="body1" color="white">lo importamos en index</Typography>
+                            <Typography variant="body1" color="white">incluimos logo {/* 9 */}</Typography>
+                          <Typography variant="body1" color="white">le damos estilos al logo {/* 10 */} </Typography>
+                          <Typography variant="body1" color="white">le damos estilos al boton {/* 11 */}</Typography>
+                          <Typography variant="body1" color="white"> envolvemos el botón en un div con sus classes</Typography>
+                          <Typography variant="body1" color="white"> creamos un icono de carrito {/* 12 */}</Typography>
+                          <Typography variant="body1" color="white">lo envolvemos en un botón{/* 13 */}</Typography>
+                          <Typography variant="body1" color="white">envolvemos el icono en un badge para queaparezca el numerito {/* 14 */}</Typography>
+                          <Typography variant="body1" color="white">Desplazar a la derecha el login {/* 14,15 */}</Typography>
+                          <Typography variant="body1" color="primary">*IMPORTANT* le estamos diciendo que la hamburgesa , el logo, el titulo ocupe todo lo que tenga que ocupar, tambien le decimos que el boton y el icono tmbien ocupen todo lo que tengan que ocupar y en medio lo rellene de espacio</Typography>
                           <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"> </Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
 

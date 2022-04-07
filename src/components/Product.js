@@ -11,7 +11,8 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import {AddShoppingCart} from '@material-ui/icons'
+import {AddShoppingCart} from '@material-ui/icons';
+import accounting from "accounting";/* 6 */
 
 const useStyles = makeStyles((theme) => ({
  root: {
@@ -58,7 +59,7 @@ export default function Product() {
             variant='h5'
             color='textSecondary'
           >
-            {50}
+            {accounting.formatMoney(50, "€")} {/* 7 */}
           </Typography>
         }
         title="Zapatilla"/* 2 */
