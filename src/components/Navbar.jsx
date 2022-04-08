@@ -19,7 +19,8 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import { Badge, Button, Hidden } from '@material-ui/core';
 import Logo from '../assets/behance.png';
-import { BrokenImage, ShoppingCart } from '@material-ui/icons';
+import {  ShoppingCart } from '@material-ui/icons';
+import {Link} from 'react-router-dom'
 
 const drawerWidth = 240;
 
@@ -114,6 +115,7 @@ export default function Navbar() {
         })}
       >
         <Toolbar>
+          <Link to="/" >{/* 28 */}
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -121,10 +123,10 @@ export default function Navbar() {
             edge="start"
             className={clsx(classes.menuButton, open && classes.hide)}
           >
-             
             <MenuIcon />
              <img src={Logo} className={classes.imageLogo}/>{/* 9 */}
           </IconButton>
+          </Link>
           <Hidden xsDown> {/* 18 */}
           <Typography variant="h6" color="textPrimary" noWrap>
             Tienda online Be
@@ -134,12 +136,14 @@ export default function Navbar() {
           <div className={classes.button}>
                 <Button variant='outlined' color="inherit"><strong>Ingresar</strong></Button>{/* 8 */}
           </div>
+          <Link to="/checkout-page">{/* 29 */}
           <IconButton arial-label ='show cart items' color="inherit">{/* 13 */}
                <Badge badgeContent={2} color="secondary">
                     <ShoppingCart fontSize="lange"/>
                </Badge>
                 
           </IconButton>
+          </Link>
           
           
         </Toolbar>

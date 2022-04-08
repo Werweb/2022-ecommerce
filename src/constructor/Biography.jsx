@@ -49,26 +49,38 @@ const Biography = () => {
                           <Typography variant="body1" color="white">en:products lo importamos</Typography>
                           <Typography variant="body1" color="white">minuto 1:28 https://www.youtube.com/watch?v=4w1UmgkPcUk&t=2196s</Typography>
                           <Typography variant="body1" color="white">vamos a mapear {/* 19 */}</Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="h3" color="white">CHECKOUT minuto 1:38</Typography>
+                          <Typography variant="body1" color="white">en components creamos dos archivos Checkout pages y chekoutCard y lo importamos en app</Typography>
+                          <Typography variant="body1" color="white">en checkout importamos productdata y product</Typography>
+                          <Typography variant="body1" color="white">para checkout card pegamos todo el codigo de product y lo pegamos</Typography>
+                          <Typography variant="body1" color="white">borramos lo que no necesitamos </Typography>
+                          <Typography variant="body1" color="white">creamos el boton de la basura {/* 20 */} lo envolvemos en un boton</Typography>
+                          <Typography variant="body1" color="white">ponemos un clasname a cardActions {/* 21 */}</Typography>
+                          <Typography variant="body1" color="white">ponemos estilos flex para alinear los elementos {/* 22 */}</Typography>
+                          <Typography variant="body1" color="white">Creamos un componete Total.js</Typography>
+                          <Typography variant="body1" color="white">en total importamos accounting {/* 23 */}</Typography>
+                          <Typography variant="body1" color="white">creamos un boton {/* 24 */}</Typography>
+                          <Typography variant="body1" color="white">Le damos los estilos 1º definimos la constante {/* 25 */} para darle estilos</Typography>
+                          <Typography variant="body1" color="white"> inicialimos classes {/* 26 */}</Typography>
+                          <Typography variant="body1" color="white">en checout pages importamos total {/* 27 */}</Typography>
+                          <Typography variant="body1" color="white">FIN PRIMERA PARTE</Typography>
+                          <Typography variant="h2" color="white">CONTEXT</Typography>
+                          <Typography variant="body1" color="white">minuto:2:20    https://www.youtube.com/watch?v=4w1UmgkPcUk&t=2196s</Typography>
+                          <Typography variant="body1" color="white">creamos el contexto con stateProvider.js</Typography>
+                          <Typography variant="body1" color="white">envolvemos todos los componetes en index y como atributo le pasamos el inicialState y el reducer que todavia no estan creados {/* 28 */}</Typography>
+                          <Typography variant="body1" color="white">el reducer es el que llevara la logica e ira cambiando  por su inicialState en el que llevara un array llamado basket</Typography>
+                          <Typography variant="body1" color="white">es decir que cada vez que le damos al carrito se ira añadiendo en el basket llevado por el inicial state</Typography>
+                          <Typography variant="body1" color="white">otro tipo de funcion de reducer sera el actionTipe que dira que tipo de aciones temeos que escuchar dentro del reducer </Typography>
+                          <Typography variant="body1" color="white">creamos el reducer.js</Typography>
+                          <Typography variant="body1" color="white">el ADD_TO-BASKET es una accion de actiontype que escucha esaaccion</Typography>
+                          <Typography variant="body1" color="white">si de algun componente nos envia una accion ADD TO Baske entonce retonamos lo que haya dentro del array mas lo que nos envian de la accion</Typography>
+                             <Typography variant="body1" color="white">todo esto lo hacemos con un switch con su case y dafault</Typography>
+                          <Typography variant="h2" color="white">Rutas minuto 2:33</Typography>
+                          <Typography variant="body1" color="white">importamos Switch , router y route</Typography>
+                          <Typography variant="body1" color="white">envolvemos todo en el Router</Typography>
+                          <Typography variant="body1" color="white">Creamos un Switch y route expecifico , ponemos el phat de como queremos que se llame y el componente dentro</Typography>
+                          <Typography variant="body1" color="white">checkaut card ya es llamado por checkaut pages por lo que no necesitamos ponerlo </Typography>
+                             <Typography variant="body1" color="white">el mismo caso para products , pero este queremos que aparezca en la pagina de inicio</Typography>
                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
