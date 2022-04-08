@@ -124,7 +124,7 @@ export default function Navbar() {
             className={clsx(classes.menuButton, open && classes.hide)}
           >
             <MenuIcon />
-             <img src={Logo} className={classes.imageLogo}/>{/* 9 */}
+             <img src={Logo} className={classes.imageLogo} alt="logo"/>{/* 9 */}
           </IconButton>
           </Link>
           <Hidden xsDown> {/* 18 */}

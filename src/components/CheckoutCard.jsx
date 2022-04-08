@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -34,11 +33,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function CheckoutCard({product : {id,name,productType, image,price,rating,description}}) {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
+  /* const [expanded, setExpanded] = React.useState(false); */
 
-  const handleExpandClick = () => {
+  /* const handleExpandClick = () => {
     setExpanded(!expanded);
-  };
+  }; */
 
   return (
     <Card className={classes.root}>
