@@ -1,6 +1,6 @@
 import React from 'react';
-import {makeStyles } from '@material-ui/core';
-import { Grid, Typography } from '@mui/material';
+import {makeStyles,Grid, Typography } from '@material-ui/core';
+
 
 const useStyles = makeStyles({
     page:{
@@ -81,11 +81,127 @@ const Biography = () => {
                           <Typography variant="body1" color="white">Creamos un Switch y route expecifico , ponemos el phat de como queremos que se llame y el componente dentro</Typography>
                           <Typography variant="body1" color="white">checkaut card ya es llamado por checkaut pages por lo que no necesitamos ponerlo </Typography>
                              <Typography variant="body1" color="white">el mismo caso para products , pero este queremos que aparezca en la pagina de inicio</Typography>
+                          <Typography variant="body1" color="white">minuto 2:40</Typography>
+                          <Typography variant="body1" color="white">una vez creada las rutas, vamos al navbar, importamos link de router dom y envolvemos el logo hacia el inicio {/* 28 */} </Typography>
+                          <Typography variant="body1" color="white">y en ShoppingCard hacia chechout-page{/* 29 */}</Typography>
+                          <Typography variant="body1" color="error">instamaos react router dom </Typography>
+                          <Typography variant="body1" color="error">me ha dado problemas al querer hacer un build en vercel </Typography>
+                           <Typography variant="body1" color="error">instalo react router dom y me daprobelmas con el switch</Typography>
+                          <Typography variant="body1" color="error">desintalo react router don con yarn yarn remove react-router-dom</Typography>
+                          <Typography variant="body1" color="error">instalamos yarn add react.router-dom@5.3.0</Typography>
+                          <Typography variant="body1" color="white">ya funciona</Typography>
+                          <Typography variant="body1" color="white"> 2:42 la idea ahora es que pinchemos en el carrito de una de las tarjetas,despachemos el objeto hacia context, se incluirá en basket y esa informacion se la pasaremos a checkout-page</Typography>
+                           <Typography variant="body1" color="white">en product, en iconButton de addShopingCart creamos un onClick addToBatket {/* 30 */}</Typography>
+                          <Typography variant="body1" color="white">creamos la funcion {/* 31 */}</Typography>
+                          <Typography variant="body1" color="white">creamos el dispach, que hara dos cosas un type y un action {/* 32 */}</Typography>
+                          <Typography variant="body1" color="white">tenemos que imortar actionTypes y dispatch {/* 33 */}</Typography>
+                          <Typography variant="body1" color="white">que le vamos a pasasar al Add_TO _basket un item con todasv las caracteristicas que tiene el producto {/* 34 */}</Typography>
+                           <Typography variant="body1" color="white">en javascript cuando los valores son los mismo, nos permite prencidir de repetir {/* 35 */}para simplificar la sintaxis</Typography>
+                          <Typography variant="body1" color="white">tenemos que hacer el destructury para obtener el basket, que ahora mismo esta vacio y el dispat , para dispachar los datos{/* 36 */} </Typography>
+                          <Typography variant="body1" color="white">importamos use -stateValue que los sacamso de StatePrivder {/* 37 */} </Typography>
+                          <Typography variant="body1" color="white">Resumen: cuando hagamos click en el boton del carrito de la compra, se ejecuta la funcion addTo Batket, que hará un dispatch y lo pasara como item , el archivo reducer , escuchará este tipo de accion, entonces modificará el estado añadiendo el item que ha recibido al array, por lo que cualquier componete mediante useState value podra consumir estos datos  </Typography>
+                          <Typography variant="body1" color="white">2:49 ahora tenemos que ir a shpingCart y actualizarlo con basket</Typography>
+                           <Typography variant="body1" color="white">nos vamos a checkoutpage, vamos a consumir lo que hay en el basket y lo renderizamos en el map</Typography>
+                          <Typography variant="body1" color="white"> quitamos productData que erea momentaneo para ver productos</Typography>
+                          <Typography variant="body1" color="white">importamos useStateValue {/* 38 */} y el estado del basket {/* 39 */}</Typography>
+                          <Typography variant="body1" color="white">en vez de Product utilizamos basket, lo protejemos con signo de interrogacion, porque si no esta cargado em el momento de lapeticion se rompetria la app {/* 40 */}</Typography>
+                          <Typography variant="body1" color="white">en vez de product, item {/* 41 */}</Typography>
+                           <Typography variant="body1" color="white">utilizamos ahora el basket para actualizar el numerito del carrito, que esta en el navbar</Typography>
+                          <Typography variant="body1" color="white">importamos useStateValue {/* 42 */} y el estado del basket {/* 43 */}</Typography>
+                          <Typography variant="body1" color="white">asi ya tenemoslos datos del basket en este componente</Typography>
+                          <Typography variant="body1" color="white">lo usamos en badge {/* 44 */}</Typography>
+                          <Typography variant="body1" color="white">2:55 BOORAADO EN EL BOTON DE BASURA , esto esta en checkotCard</Typography>
+                          <Typography variant="body1" color="white">Haremos uns dispat de delate form basket</Typography>
+                          <Typography variant="body1" color="white">el reducer lo escuchará, cojera el id y lo eliminará </Typography>
+                           <Typography variant="body1" color="white">creamos un onclick llamado removeItem {/* 45 */}</Typography>
+                          <Typography variant="body1" color="white">nesecitamos useStateValue {/* 46 */} el actionTypes {/* 47 */} i la declaracion {/* 48 */}</Typography>
+                          <Typography variant="body1" color="white">creamos la funcionRemoveItem {/* 49 */}</Typography>
+                          <Typography variant="body1" color="white">creamos un REMOVE_ITEM {/* 50 */}</Typography>
+                          <Typography variant="body1" color="white">en reducer creamos el REMOVE-Item {/* 51 */}( si escuchss un Remove_item</Typography>
+                          <Typography variant="body1" color="error">Cual es el problema, en el supuesto que pinchamos tres veces un mismo articulo y despues queremos elimminar uno solo , se borrarán los tres yaa que tiene el mismo id</Typography>
+                          <Typography variant="body1" color="error">Para solucionarlo </Typography> 
+                           <Typography variant="body1" color="white">entonces, retorna  un idex con findIdex() que resuelve el problema {/* 52 */} </Typography>
+                          <Typography variant="body1" color="white">sacamos una copia del index{/* 53 */}</Typography>
+                          <Typography variant="body1" color="white">con el metodo splice solo borra el que le indicamos{/* 54 */}</Typography>
+                          <Typography variant="body1" color="white">y retornamos todo el estado, con el nuevo basket {/* 55 */}</Typography>
+                          <Typography variant="body1" color="white">3:07  .- SUMAR la cantidad en el precio de los objetos selecionados, mediante reducer que va acumulando todo los valores</Typography>
+                          <Typography variant="body1" color="white">creamos una funcion reduce getBasketTotal {/* 56 */}</Typography>
+                           <Typography variant="body1" color="white">esta funcion la exportamos para podela consumir en el componennte total {/* 57 */}</Typography>
+                          <Typography variant="body1" color="white">y lo colocamos en el accountig {/* 58 */}</Typography>
+                          <Typography variant="body1" color="white">nos falta consumur el basket, importamos useStateValue {/* 59 */} y su estado {/* 60 */}</Typography>
+                          <Typography variant="h2" color="primary">AUTENTIFICACIÓN</Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
+                           <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                           <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                              <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                           <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                           <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                           <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                              <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                           <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                           <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                           <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                              <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                           <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                           <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                           <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white"></Typography>
+
 
                       </li>
                   </ul>

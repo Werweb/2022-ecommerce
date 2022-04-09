@@ -2,10 +2,11 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import { Box, Typography } from "@material-ui/core";
-import Products from '../components/product-data';
+/* import Products from '../components/product-data'; */
 import CheckoutCard from "./CheckoutCard";
 import Total from "./Total";
 /* import Total from "../components/Total"; */
+import{useStateValue} from "../StateProvider";/* 38 */
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,14 +17,15 @@ const useStyles = makeStyles((theme) => ({
 
 const CheckoutPage = () => {
   const classes = useStyles();
+  const [{basket}, dispatch]= useStateValue() /* 39 */
  
 
   function FormRow() {
     return (
       <React.Fragment>
-        {Products.map((product) => (
+        {/* Products */basket?.map((item) => ( /* 40 */
           <Grid item xs={12} sm={8} md={6} lg={4}>
-            <CheckoutCard key={product.id} product={product} />
+            <CheckoutCard key={item.id} product={item} />{/* 41 */}
           </Grid>
         ))}
       </React.Fragment>

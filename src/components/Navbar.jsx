@@ -20,7 +20,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import { Badge, Button, Hidden } from '@material-ui/core';
 import Logo from '../assets/behance.png';
 import {  ShoppingCart } from '@material-ui/icons';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import{useStateValue} from "../StateProvider";/* 42 */
 
 const drawerWidth = 240;
 
@@ -94,6 +95,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar() {
   const classes = useStyles();
+  const [{basket}, dispatch]= useStateValue() /* 43 */
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -138,7 +140,7 @@ export default function Navbar() {
           </div>
           <Link to="/checkout-page">{/* 29 */}
           <IconButton arial-label ='show cart items' color="inherit">{/* 13 */}
-               <Badge badgeContent={2} color="secondary">
+               <Badge badgeContent={basket?.length}/* 44 */ color="secondary">
                     <ShoppingCart fontSize="lange"/>
                </Badge>
                 

@@ -7,15 +7,15 @@ export const initialState = {
 
 export const actionTypes = {
   ADD_TO_BASKET: "ADD_TO_BASKET",
-  /* REMOVE_ITEM: "REMOVE_ITEM",
-  EMPTY_BASKET: "EMPTY_BASKET",
+  REMOVE_ITEM: "REMOVE_ITEM", /* 51 */
+  /* EMPTY_BASKET: "EMPTY_BASKET",
   SET_USER: "SET_USER",
   SET_SHIPPINGDATA: "SET_SHIPPINGDATA",
   SET_PAYMENT_MESSAGE: "SET_PAYMENT_MESSAGE", */
 };
 
-/* export const getBasketTotal = (basket) =>
-  basket?.reduce((amount, item) => item.price + amount, 0); */
+export const getBasketTotal = (basket) =>/* 56 */
+  basket?.reduce((amount, item) => item.price + amount, 0);
 
 const reducer = (state, action) => {
   console.log(action);
@@ -25,21 +25,21 @@ const reducer = (state, action) => {
         ...state,
         basket: [...state.basket, action.item],
       };
-   /*  case "REMOVE_ITEM":
-      const index = state.basket.findIndex(
+    case "REMOVE_ITEM":/* 52 */
+      const index = state.basket.findIndex( /* 52 */
         (basketItem) => basketItem.id === action.id
       );
-      let newBasket = [...state.basket];
+      let newBasket = [...state.basket];/* 53 */
       if (index >= 0) {
-        newBasket.splice(index, 1);
+        newBasket.splice(index, 1);/* 54 */
       } else {
         console.log(`Cant remove product (id: ${action.id})!`);
       }
-      return {
+      return {/* 55 */
         ...state,
         basket: newBasket,
       };
-    case "EMPTY_BASKET":
+   /*  case "EMPTY_BASKET":
       return {
         ...state,
         basket: action.basket,

@@ -1,7 +1,7 @@
 import React from 'react'
 import Biography from '../constructor/Biography'
 
-const bio = () => {
+const Bio = () => {
   return (
     <div>
         <Biography/>
@@ -9,4 +9,4 @@ const bio = () => {
   )
 }
 
-export default bio
+export default Bio
