@@ -116,26 +116,20 @@ const Biography = () => {
                            <Typography variant="body1" color="white">creamos un onclick llamado removeItem {/* 45 */}</Typography>
                           <Typography variant="body1" color="white">nesecitamos useStateValue {/* 46 */} el actionTypes {/* 47 */} i la declaracion {/* 48 */}</Typography>
                           <Typography variant="body1" color="white">creamos la funcionRemoveItem {/* 49 */}</Typography>
-                          <Typography variant="body1" color="white">creamos un REMOVE_ITEM {/* 50 */}</Typography>
-                          <Typography variant="body1" color="white">en reducer creamos el REMOVE-Item {/* 51 */}( si escuchss un Remove_item</Typography>
+                          <Typography variant="body1" color="white">creamos un REMOVE_ITEM(50) {/* 50 */}</Typography>
+                          <Typography variant="body1" color="white">en reducer creamos el REMOVE-Item(51) {/* 51 */}( si escuchss un Remove_item</Typography>
                           <Typography variant="body1" color="error">Cual es el problema, en el supuesto que pinchamos tres veces un mismo articulo y despues queremos elimminar uno solo , se borrarán los tres yaa que tiene el mismo id</Typography>
                           <Typography variant="body1" color="error">Para solucionarlo </Typography> 
-                           <Typography variant="body1" color="white">entonces, retorna  un idex con findIdex() que resuelve el problema {/* 52 */} </Typography>
-                          <Typography variant="body1" color="white">sacamos una copia del index{/* 53 */}</Typography>
-                          <Typography variant="body1" color="white">con el metodo splice solo borra el que le indicamos{/* 54 */}</Typography>
-                          <Typography variant="body1" color="white">y retornamos todo el estado, con el nuevo basket {/* 55 */}</Typography>
+                           <Typography variant="body1" color="white">entonces, retorna  un idex con findIdex() que resuelve el problema(52) {/* 52 */} </Typography>
+                          <Typography variant="body1" color="white">sacamos una copia del index (53){/* 53 */}</Typography>
+                          <Typography variant="body1" color="white">con el metodo splice solo borra el que le indicamos(54) {/* 54 */}</Typography>
+                          <Typography variant="body1" color="white">y retornamos todo el estado, con el nuevo basket(55) {/* 55 */}</Typography>
                           <Typography variant="body1" color="white">3:07  .- SUMAR la cantidad en el precio de los objetos selecionados, mediante reducer que va acumulando todo los valores</Typography>
-                          <Typography variant="body1" color="white">creamos una funcion reduce getBasketTotal {/* 56 */}</Typography>
-                           <Typography variant="body1" color="white">esta funcion la exportamos para podela consumir en el componennte total {/* 57 */}</Typography>
+                          <Typography variant="body1" color="white">creamos una funcion reduce getBasketTotal(56) {/* 56 */}</Typography>
+                           <Typography variant="body1" color="white">esta funcion la exportamos para podela consumir en el componennte total(57) {/* 57 */}</Typography>
                           <Typography variant="body1" color="white">y lo colocamos en el accountig {/* 58 */}</Typography>
-                          <Typography variant="body1" color="white">nos falta consumur el basket, importamos useStateValue {/* 59 */} y su estado {/* 60 */}</Typography>
-                          <Typography variant="h2" color="primary">AUTENTIFICACIÓN</Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                           <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white">nos falta consumur el basket, importamos useStateValue(59) {/* 59 */} y su estado (60){/* 60 */}</Typography>
+                         
                           <Typography variant="body1" color="white"></Typography>
                            <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
@@ -210,11 +204,13 @@ const Biography = () => {
                   <Typography variant="h3" color="primary">Biography</Typography>
                   <ul>
                       <li>
-                          <Typography variant="body1" color="white">Creamos un LAyout y un Menu</Typography>
-                          <Typography variant="body1" color="white">Creamos una carpeta vistas y una lista de inmuebles</Typography>
-                          <Typography variant="body1" color="white">Creamos una carpeta seguridad y un formulario de registro</Typography>
-                          <Typography variant="body1" color="white">Manejar estados :https://www.udemy.com/course/react-firebase-material-design-fullstack-extremo/learn/lecture/17782640#overview </Typography>
-                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="h2" color="primary">3:10 AUTENTIFICACIÓN</Typography>
+                          <Typography variant="body1" color="white">creamos un firebaseconfig.js</Typography>
+                           <Typography variant="body1" color="white">instalamos yarn add firebase</Typography>
+                          <Typography variant="body1" color="white">buscamos en ggoogle material ui template</Typography>
+                          <Typography variant="body1" color="white">copiamos el codigo de git del sign in , creamos un archivo signin,js y lo pegamos</Typography>
+                          <Typography variant="body1" color="white">creamos la ruta en app.js (61)</Typography>
+                          <Typography variant="body1" color="white">en Navbar envolvemos en un link el boton ingreasar (62)</Typography>
                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>

@@ -136,7 +136,9 @@ export default function Navbar() {
           </Hidden>
           <div className={classes.grow}/>{/* 14 */}
           <div className={classes.button}>
+            <Link to="/signin"> {/* 62 */}
                 <Button variant='outlined' color="inherit"><strong>Ingresar</strong></Button>{/* 8 */}
+                </Link>
           </div>
           <Link to="/checkout-page">{/* 29 */}
           <IconButton arial-label ='show cart items' color="inherit">{/* 13 */}
