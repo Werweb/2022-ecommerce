@@ -1,10 +1,15 @@
-import * as React from 'react';
+import {useState} from 'react';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import LockOutlinedIcon from '@material-ui/icons/LockOpenOutlined';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Avatar, Box, Button, Container, CssBaseline, Grid, Link, TextField, Typography} from '@material-ui/core';
 import Checkbox  from '@material-ui/core/Checkbox';
 import {Link as RouteLink,useHistory} from "react-router-dom";/*64  */ /* 65 */
+import {auth} from '../components/FirebaseAdmin';
+import {createUserWithEmailAndPassword} from 'firebase/auth'/* L3 */
+
+
+
 
 
 function Copyright(props) {
@@ -23,14 +28,44 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+     const [email, setEmail] = useState("");/* 67 */ /* L1 */
+  const [password, setPassword] = useState("");/* 67 */  /* L1 */
+  const history = useHistory();/* 74 */
+  
+
+    /* const signup = (e) => { *//* 71 */
+   /*  e.preventDefault(); *//* 72 */
+   /*  auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => { *//* 73 */
+       /*  console.log(auth);
+        if (auth) {
+          history.push("/"); *//* 75 */
+    /*     }
+      })
+      .catch((err) => alert(err.message));
+  }; */
+
+  async function signup(e){ /* L4 */
+    e.preventDefault();
+    const correo= e.target.email.value; /* L5 */
+    const contraseña= e.target.password.value; /* L5 */
+    const Usuario = await createUserWithEmailAndPassword(auth,correo,contraseña); /* L6 */
+    console.log(Usuario);
+    history.push("/");
+     
+     
+
+  }
+ 
+/*   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
-  };
+  }; */
 
   return (
     <ThemeProvider theme={theme}>
@@ -50,7 +85,7 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate onSubmit={signup} /* L1 */  /* onSubmit={handleSubmit} */ sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -74,7 +109,8 @@ export default function SignUp() {
                 />
               </Grid>
               <Grid item xs={12}>
-                <TextField
+                <TextField value={email}/* 68 */
+                 onChange={e=>setEmail(e.target.value)}/* 69 */
                   required
                   fullWidth
                   id="email"
@@ -84,7 +120,8 @@ export default function SignUp() {
                 />
               </Grid>
               <Grid item xs={12}>
-                <TextField
+                <TextField value={password}/* 68 */
+                  onChange={e=>setPassword(e.target.value)}/* 69 */
                   required
                   fullWidth
                   name="password"
@@ -97,7 +134,7 @@ export default function SignUp() {
               <Grid item xs={12}>
                 <FormControlLabel
                   control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
+                  label="Quiero recibir promociones y actualizaciones por correo electrónico."
                 />
               </Grid>
             </Grid>
@@ -106,14 +143,15 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              /* onClick={signup} *//* 70 */ /* L2 */
             >
-              Sign Up
+              Registrar
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
 
                 <RouteLink to="signin">{/* 66 */}
-                  Already have an account? Sign in
+                  ¿Ya tienes una cuenta? Ingresa
                </RouteLink>
               </Grid>
             </Grid>

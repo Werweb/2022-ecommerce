@@ -1,22 +1,25 @@
-import { initializeApp } from "firebase/app";
+ import { initializeApp } from "firebase/app";
 import {getAuth} from 'firebase/auth'
 import{getFirestore} from 'firebase/firestore';
-import {getStorage} from 'firebase/storage'
+import {getStorage} from 'firebase/storage' 
+
 
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyCW8WKYFn2ZzGGRUVgG6uUxGUhQY0i61aA",
+  apiKey: "AIzaSyCZWqAdm4gMEo7qQRVGCCMkg59n-vYuA7U",
 
-  authDomain: "firestore-stripe-51ef5.firebaseapp.com",
+  authDomain: "ecommerce-1e9d9.firebaseapp.com",
 
-  projectId: "firestore-stripe-51ef5",
+  projectId: "ecommerce-1e9d9",
 
-  storageBucket: "firestore-stripe-51ef5.appspot.com",
+  storageBucket: "ecommerce-1e9d9.appspot.com",
 
-  messagingSenderId: "1075435603004",
+  messagingSenderId: "579905926942",
 
-  appId: "1:1075435603004:web:ef0984c59c5a50784def39"
+  appId: "1:579905926942:web:09788b723a7a1a39b7bb0f",
+
+  measurementId: "G-K6VW6WQL5T"
 
 };
 

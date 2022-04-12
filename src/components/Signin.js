@@ -1,11 +1,12 @@
-import * as React from 'react';
+import {useState} from 'react';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import LockOutlinedIcon from '@material-ui/icons/LockOpenOutlined';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Avatar, Box, Button, Container, CssBaseline, Grid, Link, TextField, Typography} from '@material-ui/core';
 import Checkbox  from '@material-ui/core/Checkbox';
 import {Link as RouteLink,useHistory} from "react-router-dom";/*64  */ /* 65 */
-
+import {auth} from '../components/FirebaseAdmin';
+import {signInWithEmailAndPassword} from 'firebase/auth'
 
 function Copyright(props) {
   return (
@@ -24,6 +25,19 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignIn() {
+     const [email, setEmail] = useState("");/* 76 */
+  const [password, setPassword] = useState("");/* 76 */
+  const history = useHistory()/* 74 */
+    async function signin  (e)  {/* 80 */
+    e.preventDefault();/* 82 */
+    await signInWithEmailAndPassword(auth,email, password);
+     history.push("/");
+      /* .then((auth) => history.push("/"))
+      .catch((err) => alert(err.message)); *//* 83 */
+  };
+   
+   
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -53,7 +67,8 @@ export default function SignIn() {
             Ingresar
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
+            <TextField value={email}/* 77 */
+            onChange={e=>setEmail(e.target.value)}/* 78 */
               margin="normal"
               required
               fullWidth
@@ -63,7 +78,8 @@ export default function SignIn() {
               autoComplete="email"
               autoFocus
             />
-            <TextField
+            <TextField value={password}/* 77 */
+            onChange={e=>setPassword(e.target.value)}/* 78 */
               margin="normal"
               required
               fullWidth
@@ -82,19 +98,20 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              onClick={signin}/* 79 */
             >
              Ingresar
             </Button>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
-                  No tienes Contraseña?
+                  ¿Olvidaste la contraseña?
                 </Link>
               </Grid>
               <Grid item>
                   <RouteLink to="signup">{/* 63 */}
                 {/* <Link href="#" variant="body2"> */}
-                  {"Don't have an account? Sign Up"}
+                  {"No tienes Cuenta? Regístrate"}
                 {/* </Link> */}
                 </RouteLink>
               </Grid>

@@ -1,16 +1,16 @@
 export const initialState = {
   basket: [],
- /*  user: null,
-  shippingData: {},
+  user: null, /* 83 */
+ /*  shippingData: {},
   paymentMessage: "", */
 };
 
 export const actionTypes = {
   ADD_TO_BASKET: "ADD_TO_BASKET",
   REMOVE_ITEM: "REMOVE_ITEM", /* 51 */
-  /* EMPTY_BASKET: "EMPTY_BASKET",
-  SET_USER: "SET_USER",
-  SET_SHIPPINGDATA: "SET_SHIPPINGDATA",
+  EMPTY_BASKET: "EMPTY_BASKET",/* 98 */
+  SET_USER: "SET_USER", /* 84 */
+ /*  SET_SHIPPINGDATA: "SET_SHIPPINGDATA",
   SET_PAYMENT_MESSAGE: "SET_PAYMENT_MESSAGE", */
 };
 
@@ -39,22 +39,22 @@ const reducer = (state, action) => {
         ...state,
         basket: newBasket,
       };
-   /*  case "EMPTY_BASKET":
+    case "EMPTY_BASKET":/* 99 */
       return {
         ...state,
         basket: action.basket,
       };
-    case "SET_USER":
+    case "SET_USER":/* 85 */
       return {
         ...state,
         user: action.user,
       };
-    case "SET_SHIPPINGDATA":
+   /*  case "SET_SHIPPINGDATA":
       return {
         ...state,
         shippingData: action.shippingData,
-      };
-    case "SET_PAYMENT_MESSAGE":
+      }; */
+   /*  case "SET_PAYMENT_MESSAGE":
       return {
         ...state,
         paymentMessage: action.paymentMessage,

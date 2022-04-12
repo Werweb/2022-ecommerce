@@ -22,6 +22,9 @@ import Logo from '../assets/behance.png';
 import {  ShoppingCart } from '@material-ui/icons';
 import {Link} from 'react-router-dom';
 import{useStateValue} from "../StateProvider";/* 42 */
+import {auth} from '../components/FirebaseAdmin'
+import { actionTypes } from '../reducer';
+import {useHistory} from "react-router-dom"
 
 const drawerWidth = 240;
 
@@ -95,9 +98,26 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navbar() {
   const classes = useStyles();
-  const [{basket}, dispatch]= useStateValue() /* 43 */
+  const [{basket,user}, dispatch]= useStateValue() /* 43 */ /* 90 */
+  const history = useHistory()/* 97 */
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+
+  const handleAuth=()=>{/* 94 */
+    if(user){
+      auth.signOut();
+      dispatch({ /* 95 */
+        type:actionTypes.EMPTY_BASKET,
+        basket:[],
+      });
+        dispatch({ /* 100 */
+        type:actionTypes.SET_USER,
+        user:null,
+      });
+      history.push('/')/* 96 */
+
+    }
+  }
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -135,9 +155,10 @@ export default function Navbar() {
           </Typography>
           </Hidden>
           <div className={classes.grow}/>{/* 14 */}
+          <Typography variant="h6" color="textPrimary"> Hola {user? user.email:"Guest"}</Typography>{/* 91 */}
           <div className={classes.button}>
             <Link to="/signin"> {/* 62 */}
-                <Button variant='outlined' color="inherit"><strong>Ingresar</strong></Button>{/* 8 */}
+                <Button onClick={handleAuth}/* 93 */ variant='outlined' color="inherit"><strong>{user? "salir":"Ingresar"}</strong></Button>{/* 8 */} {/* 92 */}
                 </Link>
           </div>
           <Link to="/checkout-page">{/* 29 */}
