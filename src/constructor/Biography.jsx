@@ -235,7 +235,7 @@ const Biography = () => {
                                 <Typography variant="body1" color="error">lasito: guardamos correo y contraseña, usamos el evento y los id de cada campo (l5)</Typography>
                                  <Typography variant="body1" color="error">lasito: hacemos uso de la funcion create.... con su auth que llamamos de firebase correo y contra  (l6)</Typography>
                           <Typography variant="body1" color="white">3:47 Sigin 1º Paso creamos un estado par el email y el passport (76) es singin</Typography>
-                          <Typography variant="body1" color="error">Lasito: minuto 21:15 https://www.youtube.com/watch?v=PGPiefJK8LU&t=1270s </Typography>
+                          <Typography variant="body1" color="error">Lasito: minuto 21:15 hasta el 22:30  https://www.youtube.com/watch?v=PGPiefJK8LU&t=1270s </Typography>
                           <Typography variant="body1" color="white"> 2º paso , capturar lo que el usuario esta tecleando en los input (77)creando un value</Typography>
                           <Typography variant="body1" color="error">Lasito: importamos signinWithEmaeilAndPassword  (L7)</Typography>
                           <Typography variant="bodi1" color="error">hacemos lo mismo que en signup</Typography>
@@ -275,6 +275,9 @@ const Biography = () => {
                           <Typography variant="body1" color="white">por lo que esta pagina checkout llama al resto de los componentes</Typography>
                           <Typography variant="body1" color="white">nos vamos a buscar el botón pagar del component total</Typography>
                            <Typography variant="body1" color="white">pero primero al app a crear la ruta (101)</Typography>
+                               <Typography variant="body1" color="white">vamos a total  importamos link de react router dom (102)</Typography>
+                          <Typography variant="body1" color="white"> creamos el link(103)</Typography>
+                          <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white">4:23hacemos un npm run bild</Typography>
                           <Typography variant="body1" color="white">nos metemos en netlify.com</Typography>
                           <Typography variant="body1" color="white"></Typography>
@@ -300,10 +303,43 @@ const Biography = () => {
                       <li>
                           <Typography variant="body1" color="white">4:28 Parte dos del pryecto</Typography>
                           <Typography variant="body1" color="white">https://www.youtube.com/watch?v=4w1UmgkPcUk&t=2196s</Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
-                          <Typography variant="body1" color="white"></Typography>
+                          <Typography variant="body1" color="white">nada importante hasta minuto: 4:38</Typography>
+                          <Typography variant="body1" color="white">necesitamos usar un hook useForm, nos captura todos los datos de los imput en un solo objeto </Typography>
+                          <Typography variant="body1" color="white">El proceso es el siguiente:use form captura los datos , se lo pasamos a un bakent que construiremos con node.js,que se comunicará con stripe dandole los datos con numero de tarjeta, stripe lo autorizará o no, devuelve al bakent una respuesta, y esta a lfrontent de react </Typography>
+                          <Typography variant="body1" color="white">4:46 en checkuot,entendiendo el componente (material 1,2,3,4,5)</Typography>
+                           <Typography variant="body1" color="white">5:17 instalamos yarn add react-hook-form</Typography>
+                          <Typography variant="body1" color="white">en addressForm: instalamos useForm y FormProvider (104)</Typography>
+                          <Typography variant="body1" color="white">creamos un metodo para capturar los datos (105)</Typography>
+                          <Typography variant="body1" color="white">y se lo pasamos a form provider que envolvera el formulario (106)</Typography>
+                          <Typography variant="body1" color="white">hacemos un grid con todos los input (107)</Typography>
+                            <Typography variant="body1" color="white">pero vamos a hacer un componente aparte para los imput dentro de la carpeta checkoutForm</Typography>
+                          <Typography variant="body1" color="white">en checkoutInput: importamos useFormContext, Controller (108)</Typography>
+                          <Typography variant="body1" color="white">lo inicializamos (109)</Typography>
+                          <Typography variant="body1" color="white">al controller le decimos que se comòrte como un textField(110)</Typography>
+                            <Typography variant="body1" color="white">como no ha funcionado lo estoy haciendo con el formulario original de addressForm</Typography>
+                          <Typography variant="body1" color="white">en addressForm: creamos dos botones uno atras y un siguiente</Typography>
+                          <Typography variant="body1" color="white">el boton del siguente creamos un Sumit</Typography>
+                          <Typography variant="body1" color="white">el atras se comportara  como link (110)</Typography>
+                            <Typography variant="body1" color="white">lo envolvemos a los botones en un div y le damos estilos css (111)</Typography>
+                          <Typography variant="body1" color="white">le damos el atributo onSubmit a la etiqueta Form(112)</Typography>
+                          <Typography variant="body1" color="white">al hacer next queremos dos cosas , que nos haga un dispacht(113) y que nos lleve alsiguiente paso </Typography>
+                          <Typography variant="body1" color="white">en checkout definimos dos funciones nextStep y backStep(114)</Typography>
+                            <Typography variant="body1" color="white">como checkout es padre de addressForm podemos pasarle como props la funcion</Typography>
+                          <Typography variant="body1" color="white">pues pasemolo como props (115)</Typography>
+                          <Typography variant="body1" color="white">addressForm acepta como props nextState (116)</Typography>
+                          <Typography variant="body1" color="white"> y luego dentro del sumitt poner NextStep() para que pase al siguiente formulario (117)</Typography>
+                            <Typography variant="body1" color="white">LO PROBAMOS Y NOS PASA AL SIGUIENTE PASO</Typography>
+                          <Typography variant="body1" color="white">5:59 PaymentForm</Typography>
+                          <Typography variant="body1" color="white">este componente va aceptar backStep y nextStep(118) bien si queremos ir hacia atras o al siguiente paso despues de poner los datos de la tarjeta</Typography>
+                          <Typography variant="body1" color="white">Llamaos a otro componente Review (119)</Typography>
+                          <Typography variant="body1" color="white">Vamos al review </Typography>
+                          <Typography variant="body1" color="white">creamos una lista que tendra los  objetos del basket que creamos en reducer </Typography>
+                         <Typography variant="body1" color="white">para consumir el basket necesitamos useStateValue, get basket total que está en reducer(120) </Typography>
+                          <Typography variant="body1" color="white">lo desestructuramos (121)</Typography>
+                          <Typography variant="body1" color="white">traemos accountig y le damos formato al número (122)</Typography>
+                          <Typography variant="body1" color="white">cremos un ListItem (123)</Typography>
+                          <Typography variant="body1" color="white">hacemos un mapeo de Basket(124)</Typography>
+                          <Typography variant="body1" color="white">siwmpre que hagamos un map necesitamos una key</Typography>
                            <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>
                           <Typography variant="body1" color="white"></Typography>

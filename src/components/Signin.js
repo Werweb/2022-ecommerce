@@ -6,7 +6,7 @@ import { Avatar, Box, Button, Container, CssBaseline, Grid, Link, TextField, Typ
 import Checkbox  from '@material-ui/core/Checkbox';
 import {Link as RouteLink,useHistory} from "react-router-dom";/*64  */ /* 65 */
 import {auth} from '../components/FirebaseAdmin';
-import {signInWithEmailAndPassword} from 'firebase/auth'
+import {signInWithEmailAndPassword} from 'firebase/auth' /* L7 */
 
 function Copyright(props) {
   return (

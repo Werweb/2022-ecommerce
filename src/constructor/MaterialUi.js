@@ -205,6 +205,7 @@ const MaterialUi = () => {
         <Typography variant="h1" color="initial">CAMPOS DE TEXTO</Typography>
          <Typography variant="h6" color="initial">https://www.youtube.com/watch?v=sTdt2cJS2dg&list=PL4cUxeGkcC9gjxLvV4VEkZ6H6H4yWuS58&index=7</Typography>
         <Typography variant="h6" color="initial">importamos import  |TextField|  from '@mui/material'</Typography>
+       <Typography variant="h6" color="initial">TextField equivale a un input</Typography>
         <form noValidate autoComplete='off'>
             <TextField/>
         </form>
@@ -286,6 +287,7 @@ const MaterialUi = () => {
          <Typography variant="h6" color="initial">https://www.youtube.com/watch?v=DSuJLPRsdZQ&list=PL4cUxeGkcC9gjxLvV4VEkZ6H6H4yWuS58&index=12</Typography>
         <Typography variant="h6" color="initial">en la pagina de material ui esta en componentes - cajon</Typography>
          <Typography variant="h6" color="initial">https://www.youtube.com/watch?v=Ix1LZGBSp-E&list=PL4cUxeGkcC9gjxLvV4VEkZ6H6H4yWuS58&index=13</Typography>
+       
         <Typography variant="h6" color="initial"></Typography> 
          <Typography variant="h6" color="initial"></Typography>
         <Typography variant="h6" color="initial"></Typography>
@@ -386,6 +388,27 @@ const MaterialUi = () => {
         </Typography>
       </main>
     </div>
+     <Box>
+        <Typography variant="h1" color="initial">Stepper</Typography>
+        <Typography variant="body2" color="initial">4:55 https://www.youtube.com/watch?v=4w1UmgkPcUk&t=13602s </Typography>
+        <Typography variant="h6" color="initial">es un mecanismo que nos permite pasar de un pasa al otro y el paso ya pasado se coloca como ok </Typography>
+        <Typography variant="h6" color="initial">necesitamos un array con los pasos (Material 1) </Typography>
+        <Typography variant="h6" color="initial">hacemos un map (material 2) usamos otro componete, step y stepLabel</Typography>
+        <Typography variant="h6" color="initial">creamos un estado para el activeStep y la funcion handleNext  y otra bandleback(material 3)</Typography>
+        <Typography variant="h6" color="initial">y ponemos el estado es el Steper (material 4)</Typography>
+        <Typography variant="h6" color="initial"></Typography>
+        <Typography variant="h6" color="initial"></Typography>
+        <Typography variant="h6" color="initial"></Typography>
+        <Typography variant="h6" color="initial"></Typography>
+        <Typography variant="h6" color="initial"></Typography>
+        <Typography variant="h6" color="initial"></Typography>
+        <Typography variant="h6" color="initial"></Typography>
+        
+        <Typography variant="h6" color="initial"></Typography>
+        <Typography variant="h6" color="initial"></Typography>
+
+    
+    </Box>
     </Box>
     </>
 
